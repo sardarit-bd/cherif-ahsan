@@ -1,26 +1,69 @@
+/* 🟢 All @import rules MUST come first */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap');
 @import "tailwindcss";
 
+/* ===== Root Theme Variables ===== */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Font variables */
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Space Grotesk', sans-serif;
 }
 
+/* ===== Tailwind Theme Inline ===== */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-secondary);
+  --font-display: var(--font-primary);
 }
 
+/* ===== Dark Mode ===== */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #020617;
+    --foreground: #e0e7ff;
   }
 }
 
+/* ===== Base Styles ===== */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Headings ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* ===== Links ===== */
+a {
+  color: #38bdf8;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #0ea5e9;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.6);
 }
