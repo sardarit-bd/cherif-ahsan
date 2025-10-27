@@ -101,7 +101,7 @@ export default function HeroSection() {
           />
 
           {/* Main Image */}
-          <div className="relative z-10 rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(56,189,248,0.25)] hover:scale-[1.03] transition-transform duration-500">
+          <div className="relative z-10 rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(56,189,248,0.25)]">
             <Image
               src="/saas.png"
               alt="AI Real Estate Showcase"
